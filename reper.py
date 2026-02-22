@@ -22,8 +22,8 @@ try:
 except: pass
 session_files = listdir('sessions')
 session_files.sort()
-api_id = 25148883
-api_hash = 'abc30c3b47a075ec9a0854b3015ef210'
+api_id = 24597015
+api_hash = '1b1aefc2645a9275a3069ca6b7b7f7a2'
 if command_line_args.help:
     print(f'''Help:
   -an {Fore.LIGHTBLUE_EX}NUMBER{Fore.RESET}, --add-number {Fore.LIGHTBLUE_EX}NUMBER{Fore.RESET} ~> {Fore.YELLOW}add account to script{Fore.RESET}
