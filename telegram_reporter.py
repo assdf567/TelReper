@@ -12,8 +12,8 @@ import time
 class TelegramReporter:
     def __init__(self, config_manager):
         self.config = config_manager
-        self.api_id = self.config.get('api_id')
-        self.api_hash = self.config.get('api_hash')
+        self.api_id = self.config.get('24597015')
+        self.api_hash = self.config.get('1b1aefc2645a9275a3069ca6b7b7f7a2')
         self.sessions_dir = 'sessions'
         self.ensure_sessions_dir()
     
@@ -174,4 +174,5 @@ class TelegramReporter:
             )
             return result
         finally:
+
             loop.close() 
