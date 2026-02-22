@@ -22,8 +22,8 @@ try:
 except: pass
 session_files = listdir('sessions')
 session_files.sort()
-api_id = 25148883
-api_hash = 'abc30c3b47a075ec9a0854b3015ef210'
+api_id = 24597015
+api_hash = '1b1aefc2645a9275a3069ca6b7b7f7a2'
 if command_line_args.help:
     print(f'''Help:
   -an {Fore.LIGHTBLUE_EX}NUMBER{Fore.RESET}, --add-number {Fore.LIGHTBLUE_EX}NUMBER{Fore.RESET} ~> {Fore.YELLOW}add account to script{Fore.RESET}
@@ -47,9 +47,9 @@ elif command_line_args.reasons:
 elif command_line_args.add_number != None:
     phone_number = command_line_args.add_number
     if session_files != []:
-        account_numbers = [int(search('Ac(\d+)\.session', session_file).group(1)) for session_file in session_files]
+        account_numbers = [int(search(r'Ac(\d+)\.session', session_file).group(1)) for session_file in session_files]
         account_numbers.sort()
-        last_account_number = int(search('Ac(\d+)\.session', session_files[-1]).group(1))
+        last_account_number = int(search(r'Ac(\d+)\.session', session_files[-1]).group(1))
         telegram_client = TelegramClient(f'sessions/Ac{account_numbers[-1]+1}', api_id, api_hash)
         try:
             telegram_client.start(phone_number)
